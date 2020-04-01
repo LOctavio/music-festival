@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "cocogoose";
+  src: url("../fonts/cocogoose/Cocogoose_trial.otf");
+}
+
+@font-face {
+  font-family: "lato-light";
+  src: url("../fonts/lato/Lato-Light.ttf");
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -142,4 +152,52 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+$first-color: #272a31;
+$second-color: #ec5242;
+$third-color: #d3d3d3;
+$cocogoose: "cocogoose", Arial, Helvetica, sans-serif;
+$lato: "lato-light", Arial, Arial, Helvetica, sans-serif;
+$padding-page: 25px;
+
+nav {
+  padding: 20px 0;
+
+  i[class$="fa-bars"] {
+    margin-left: 35px;
+    font-size: 40px;
+    color: $first-color;
+  }
+}
+
+#main_section {
+  padding: 25px $padding-page 80px $padding-page;
+
+  #main_title {
+    font-size: 30px;
+    font-family: $cocogoose;
+    text-transform: uppercase;
+    color: $second-color;
+  }
+
+  div {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid $first-color;
+    max-width: 500px;
+
+    #main_description {
+      font-family: $lato;
+      line-height: 30px;
+      color: $first-color;
+    }
+  }
+
+  #date_festival {
+    font-family: $cocogoose;
+    color: $first-color;
+    font-size: 20px;
+  }
 }
