@@ -185,6 +185,13 @@ hr {
   @extend %padding-shared;
 
   display: none;
+
+  a {
+    color: $fourth-color;
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: $lato;
+  }
 }
 
 #second_navbar {
@@ -200,6 +207,15 @@ hr {
 
   a {
     display: none;
+    color: $first-color;
+    text-decoration: none;
+    font-family: $lato;
+  }
+
+  #logo {
+    font-family: $cocogoose;
+    font-size: 36px;
+    color: $first-color;
   }
 
   ul {

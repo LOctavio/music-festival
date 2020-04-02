@@ -170,6 +170,12 @@ hr {
 #first_navbar {
   display: none;
 }
+#first_navbar a {
+  color: #fcfcfc;
+  text-decoration: none;
+  padding: 0 10px;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
 
 #second_navbar {
   padding-top: 15px;
@@ -181,6 +187,14 @@ hr {
 }
 #second_navbar a {
   display: none;
+  color: #272a31;
+  text-decoration: none;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+#second_navbar #logo {
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #272a31;
 }
 #second_navbar ul {
   display: none;
