@@ -160,7 +160,20 @@ $third-color: #d3d3d3;
 $fourth-color: #fcfcfc;
 $cocogoose: "cocogoose", Arial, Helvetica, sans-serif;
 $lato: "lato-light", Arial, Helvetica, sans-serif;
-$padding-page: 25px;
+
+@mixin padding($padding-page) {
+  padding: 25px $padding-page 80px $padding-page;
+}
+
+%padding-shared {
+  @include padding(25px);
+}
+
+@media screen and (min-width: 768px) {
+  %padding-shared {
+    @include padding(120px);
+  }
+}
 
 hr {
   width: 40px;
@@ -178,7 +191,7 @@ nav {
 }
 
 #main_section {
-  padding: 25px $padding-page 80px $padding-page;
+  @extend %padding-shared;
 
   #main_title {
     font-size: 30px;
@@ -209,7 +222,8 @@ nav {
 }
 
 #daily_schedule {
-  padding: 40px $padding-page 20px $padding-page;
+  @extend %padding-shared;
+
   background-color: $first-color;
   display: flex;
   flex-direction: column;
@@ -257,7 +271,7 @@ nav {
 
       p {
         color: $fourth-color;
-        font-family: $lato;
+        font-family: $cocogoose;
       }
     }
 
@@ -267,10 +281,30 @@ nav {
       font-family: $lato;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    > article {
+      flex-direction: column;
+      height: 180px;
+      text-align: center;
+      justify-content: center;
+
+      > div {
+        min-width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #schedule_grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 #djs_list {
-  padding: 30px $padding-page 0 $padding-page;
+  @extend %padding-shared;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,7 +321,8 @@ nav {
 #djs_grid {
   display: grid;
   gap: 60px;
-  padding: 40px $padding-page 20px $padding-page;
+
+  @extend %padding-shared;
 
   article {
     display: flex;
