@@ -151,13 +151,13 @@ html {
   box-sizing: inherit;
 }
 
-#djs_list, #daily_schedule, #main_section, nav {
+#djs_list, #daily_schedule, #main_section, #second_navbar, #first_navbar {
   padding-left: 25px;
   padding-right: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  #djs_list, #daily_schedule, #main_section, nav {
+  #djs_list, #daily_schedule, #main_section, #second_navbar, #first_navbar {
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -167,17 +167,14 @@ hr {
   border: 1px solid #ec5242;
 }
 
-nav {
+#second_navbar {
   padding-top: 15px;
+  display: none;
 }
-nav i[class$=fa-bars] {
+#second_navbar i[class$=fa-bars] {
   margin-left: 10px;
   font-size: 40px;
   color: #272a31;
-}
-
-#second_navbar {
-  display: none;
 }
 #second_navbar span {
   height: fit-content;
@@ -191,17 +188,26 @@ nav i[class$=fa-bars] {
 }
 
 @media screen and (min-width: 768px) {
-  nav {
+  #first_navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    background-color: #272a31;
+  }
+  #first_navbar ul {
+    display: flex;
+  }
+
+  #second_navbar {
     padding-top: 0;
-  }
-  nav i[class$=fa-bars] {
-    display: none;
-  }
-  nav #second_navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
+  }
+  #second_navbar i[class$=fa-bars] {
+    display: none;
   }
 }
 #main_section {

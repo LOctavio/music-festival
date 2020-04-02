@@ -181,20 +181,21 @@ hr {
   border: 1px solid $second-color;
 }
 
-nav {
+#first_navbar {
+  @extend %padding-shared;
+}
+
+#second_navbar {
   @extend %padding-shared;
 
   padding-top: 15px;
+  display: none;
 
   i[class$="fa-bars"] {
     margin-left: 10px;
     font-size: 40px;
     color: $first-color;
   }
-}
-
-#second_navbar {
-  display: none;
 
   span {
     height: fit-content;
@@ -211,18 +212,27 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
-  nav {
+  #first_navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    background-color: $first-color;
+
+    ul {
+      display: flex;
+    }
+  }
+
+  #second_navbar {
     padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 
     i[class$="fa-bars"] {
       display: none;
-    }
-
-    #second_navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
     }
   }
 }
