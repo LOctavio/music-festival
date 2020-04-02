@@ -320,11 +320,30 @@ nav {
 
 #djs_grid {
   display: grid;
-  gap: 60px;
-
-  @extend %padding-shared;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 
   article {
     display: flex;
+
+    img[alt^="dj"] {
+      max-height: 109px;
+      border: 1px solid $first-color;
+    }
+
+    > div {
+      padding-left: 20px;
+
+      h2 {
+        font-family: $cocogoose;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #djs_grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

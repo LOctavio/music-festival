@@ -151,12 +151,12 @@ html {
   box-sizing: inherit;
 }
 
-#djs_grid, #djs_list, #daily_schedule, #main_section {
+#djs_list, #daily_schedule, #main_section {
   padding: 25px 25px 80px 25px;
 }
 
 @media screen and (min-width: 768px) {
-  #djs_grid, #djs_list, #daily_schedule, #main_section {
+  #djs_list, #daily_schedule, #main_section {
     padding: 25px 120px 80px 120px;
   }
 }
@@ -282,10 +282,28 @@ nav i[class$=fa-bars] {
 
 #djs_grid {
   display: grid;
-  gap: 60px;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 #djs_grid article {
   display: flex;
+}
+#djs_grid article img[alt^=dj] {
+  max-height: 109px;
+  border: 1px solid #272a31;
+}
+#djs_grid article > div {
+  padding-left: 20px;
+}
+#djs_grid article > div h2 {
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  #djs_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
