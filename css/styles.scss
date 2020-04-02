@@ -215,48 +215,12 @@ nav {
   flex-direction: column;
   align-items: center;
 
-  #daily_schedule_title {
+  &_title {
     color: $fourth-color;
     font-family: $cocogoose;
     margin-bottom: 10px;
     width: fit-content;
     font-size: 26px;
-  }
-
-  #schedule_grid {
-    display: grid;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-
-    > div {
-      background-color: #3b3e45;
-      display: flex;
-      align-items: center;
-      height: 100px;
-
-      > div {
-        min-width: 200px;
-        text-align: center;
-        line-height: 30px;
-
-        h3 {
-          color: $second-color;
-          font-family: $cocogoose;
-        }
-
-        p {
-          color: $fourth-color;
-          font-family: $lato;
-        }
-      }
-
-      span {
-        height: fit-content;
-        color: $fourth-color;
-        font-family: $lato;
-      }
-    }
   }
 
   #buy_tickets_button {
@@ -269,13 +233,49 @@ nav {
   }
 }
 
+#schedule_grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  > article {
+    background-color: #3b3e45;
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+    > div {
+      min-width: 200px;
+      text-align: center;
+      line-height: 30px;
+
+      h3 {
+        color: $second-color;
+        font-family: $cocogoose;
+      }
+
+      p {
+        color: $fourth-color;
+        font-family: $lato;
+      }
+    }
+
+    span {
+      height: fit-content;
+      color: $fourth-color;
+      font-family: $lato;
+    }
+  }
+}
+
 #djs_list {
   padding: 30px $padding-page 0 $padding-page;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  #djs_list_title {
+  &_title {
     color: $first-color;
     font-family: $cocogoose;
     margin-bottom: 10px;

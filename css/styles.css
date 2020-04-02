@@ -199,42 +199,12 @@ nav i[class$=fa-bars] {
   flex-direction: column;
   align-items: center;
 }
-#daily_schedule #daily_schedule_title {
+#daily_schedule_title {
   color: #fcfcfc;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
   width: fit-content;
   font-size: 26px;
-}
-#daily_schedule #schedule_grid {
-  display: grid;
-  gap: 10px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-#daily_schedule #schedule_grid > div {
-  background-color: #3b3e45;
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
-#daily_schedule #schedule_grid > div > div {
-  min-width: 200px;
-  text-align: center;
-  line-height: 30px;
-}
-#daily_schedule #schedule_grid > div > div h3 {
-  color: #ec5242;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
-}
-#daily_schedule #schedule_grid > div > div p {
-  color: #fcfcfc;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
-}
-#daily_schedule #schedule_grid > div span {
-  height: fit-content;
-  color: #fcfcfc;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 #daily_schedule #buy_tickets_button {
   border: none;
@@ -245,13 +215,44 @@ nav i[class$=fa-bars] {
   font-size: 16px;
 }
 
+#schedule_grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#schedule_grid > article {
+  background-color: #3b3e45;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+#schedule_grid > article > div {
+  min-width: 200px;
+  text-align: center;
+  line-height: 30px;
+}
+#schedule_grid > article > div h3 {
+  color: #ec5242;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+}
+#schedule_grid > article > div p {
+  color: #fcfcfc;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+#schedule_grid > article span {
+  height: fit-content;
+  color: #fcfcfc;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+
 #djs_list {
   padding: 30px 25px 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#djs_list #djs_list_title {
+#djs_list_title {
   color: #272a31;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
