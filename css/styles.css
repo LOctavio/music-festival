@@ -259,9 +259,14 @@ nav i[class$=fa-bars] {
   width: fit-content;
   font-size: 26px;
 }
-#djs_list #djs_grid {
+
+#djs_grid {
   display: grid;
   gap: 60px;
+  padding: 40px 25px 20px 25px;
+}
+#djs_grid article {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
