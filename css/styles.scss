@@ -157,9 +157,15 @@ html {
 $first-color: #272a31;
 $second-color: #ec5242;
 $third-color: #d3d3d3;
+$fourth-color: #fcfcfc;
 $cocogoose: "cocogoose", Arial, Helvetica, sans-serif;
-$lato: "lato-light", Arial, Arial, Helvetica, sans-serif;
+$lato: "lato-light", Arial, Helvetica, sans-serif;
 $padding-page: 25px;
+
+hr {
+  width: 40px;
+  border: 1px solid $second-color;
+}
 
 nav {
   padding: 20px 0;
@@ -199,5 +205,65 @@ nav {
     font-family: $cocogoose;
     color: $first-color;
     font-size: 20px;
+  }
+}
+
+#daily_schedule {
+  padding: 40px $padding-page 20px $padding-page;
+  background-color: $first-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #daily_schedule_title {
+    color: $fourth-color;
+    font-family: $cocogoose;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+
+  #schedule_grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    > div {
+      background-color: #3b3e45;
+      display: flex;
+      align-items: center;
+      height: 80px;
+
+      > div {
+        min-width: 200px;
+        text-align: center;
+        line-height: 30px;
+
+        h3 {
+          color: $second-color;
+          font-family: $cocogoose;
+        }
+
+        p {
+          color: $fourth-color;
+          font-family: $lato;
+        }
+      }
+
+      span {
+        height: fit-content;
+        color: $fourth-color;
+        font-family: $lato;
+      }
+    }
+  }
+
+  #buy_tickets_button {
+    border: none;
+    background-color: $second-color;
+    color: $fourth-color;
+    padding: 30px 50px;
+    font-family: $cocogoose;
+    font-size: 16px;
   }
 }

@@ -151,6 +151,11 @@ html {
   box-sizing: inherit;
 }
 
+hr {
+  width: 40px;
+  border: 1px solid #ec5242;
+}
+
 nav {
   padding: 20px 0;
 }
@@ -177,7 +182,7 @@ nav i[class$=fa-bars] {
   max-width: 500px;
 }
 #main_section div #main_description {
-  font-family: "lato-light", Arial, Arial, Helvetica, sans-serif;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
   line-height: 30px;
   color: #272a31;
 }
@@ -185,6 +190,58 @@ nav i[class$=fa-bars] {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #272a31;
   font-size: 20px;
+}
+
+#daily_schedule {
+  padding: 40px 25px 20px 25px;
+  background-color: #272a31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#daily_schedule #daily_schedule_title {
+  color: #fcfcfc;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+#daily_schedule #schedule_grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#daily_schedule #schedule_grid > div {
+  background-color: #3b3e45;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+#daily_schedule #schedule_grid > div > div {
+  min-width: 200px;
+  text-align: center;
+  line-height: 30px;
+}
+#daily_schedule #schedule_grid > div > div h3 {
+  color: #ec5242;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+}
+#daily_schedule #schedule_grid > div > div p {
+  color: #fcfcfc;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+#daily_schedule #schedule_grid > div span {
+  height: fit-content;
+  color: #fcfcfc;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+#daily_schedule #buy_tickets_button {
+  border: none;
+  background-color: #ec5242;
+  color: #fcfcfc;
+  padding: 30px 50px;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=styles.css.map */
