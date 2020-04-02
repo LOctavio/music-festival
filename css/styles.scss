@@ -183,13 +183,14 @@ hr {
 
 #first_navbar {
   @extend %padding-shared;
+
+  display: none;
 }
 
 #second_navbar {
   @extend %padding-shared;
 
   padding-top: 15px;
-  display: none;
 
   i[class$="fa-bars"] {
     margin-left: 10px;
@@ -197,12 +198,12 @@ hr {
     color: $first-color;
   }
 
-  span {
-    height: fit-content;
+  a {
+    display: none;
   }
 
   ul {
-    display: flex;
+    display: none;
     height: fit-content;
 
     li {
@@ -233,6 +234,14 @@ hr {
 
     i[class$="fa-bars"] {
       display: none;
+    }
+
+    a {
+      display: inline;
+    }
+
+    ul {
+      display: flex;
     }
   }
 }

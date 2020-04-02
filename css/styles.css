@@ -167,20 +167,23 @@ hr {
   border: 1px solid #ec5242;
 }
 
+#first_navbar {
+  display: none;
+}
+
 #second_navbar {
   padding-top: 15px;
-  display: none;
 }
 #second_navbar i[class$=fa-bars] {
   margin-left: 10px;
   font-size: 40px;
   color: #272a31;
 }
-#second_navbar span {
-  height: fit-content;
+#second_navbar a {
+  display: none;
 }
 #second_navbar ul {
-  display: flex;
+  display: none;
   height: fit-content;
 }
 #second_navbar ul li {
@@ -208,6 +211,12 @@ hr {
   }
   #second_navbar i[class$=fa-bars] {
     display: none;
+  }
+  #second_navbar a {
+    display: inline;
+  }
+  #second_navbar ul {
+    display: flex;
   }
 }
 #main_section {
