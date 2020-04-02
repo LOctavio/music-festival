@@ -162,7 +162,8 @@ $cocogoose: "cocogoose", Arial, Helvetica, sans-serif;
 $lato: "lato-light", Arial, Helvetica, sans-serif;
 
 @mixin padding($padding-page) {
-  padding: 25px $padding-page 80px $padding-page;
+  padding-left: $padding-page;
+  padding-right: $padding-page;
 }
 
 %padding-shared {
@@ -181,16 +182,55 @@ hr {
 }
 
 nav {
-  padding: 20px 0;
+  @extend %padding-shared;
+
+  padding-top: 15px;
 
   i[class$="fa-bars"] {
-    margin-left: 35px;
+    margin-left: 10px;
     font-size: 40px;
     color: $first-color;
   }
 }
 
+#second_navbar {
+  display: none;
+
+  span {
+    height: fit-content;
+  }
+
+  ul {
+    display: flex;
+    height: fit-content;
+
+    li {
+      padding: 10px 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding-top: 0;
+
+    i[class$="fa-bars"] {
+      display: none;
+    }
+
+    #second_navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+  }
+}
+
 #main_section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
   @extend %padding-shared;
 
   #main_title {
@@ -222,6 +262,9 @@ nav {
 }
 
 #daily_schedule {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
   @extend %padding-shared;
 
   background-color: $first-color;
@@ -251,7 +294,7 @@ nav {
   display: grid;
   gap: 10px;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
   > article {
     background-color: #3b3e45;
@@ -299,6 +342,7 @@ nav {
 @media screen and (min-width: 768px) {
   #schedule_grid {
     grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
   }
 }
 
@@ -308,6 +352,8 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   &_title {
     color: $first-color;

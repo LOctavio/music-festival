@@ -151,13 +151,15 @@ html {
   box-sizing: inherit;
 }
 
-#djs_list, #daily_schedule, #main_section {
-  padding: 25px 25px 80px 25px;
+#djs_list, #daily_schedule, #main_section, nav {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  #djs_list, #daily_schedule, #main_section {
-    padding: 25px 120px 80px 120px;
+  #djs_list, #daily_schedule, #main_section, nav {
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 hr {
@@ -166,14 +168,46 @@ hr {
 }
 
 nav {
-  padding: 20px 0;
+  padding-top: 15px;
 }
 nav i[class$=fa-bars] {
-  margin-left: 35px;
+  margin-left: 10px;
   font-size: 40px;
   color: #272a31;
 }
 
+#second_navbar {
+  display: none;
+}
+#second_navbar span {
+  height: fit-content;
+}
+#second_navbar ul {
+  display: flex;
+  height: fit-content;
+}
+#second_navbar ul li {
+  padding: 10px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding-top: 0;
+  }
+  nav i[class$=fa-bars] {
+    display: none;
+  }
+  nav #second_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+}
+#main_section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 #main_section #main_title {
   font-size: 30px;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
@@ -199,6 +233,8 @@ nav i[class$=fa-bars] {
 }
 
 #daily_schedule {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #272a31;
   display: flex;
   flex-direction: column;
@@ -224,7 +260,7 @@ nav i[class$=fa-bars] {
   display: grid;
   gap: 10px;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 #schedule_grid > article {
   background-color: #3b3e45;
@@ -265,12 +301,15 @@ nav i[class$=fa-bars] {
 @media screen and (min-width: 768px) {
   #schedule_grid {
     grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
   }
 }
 #djs_list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 #djs_list_title {
   color: #272a31;
