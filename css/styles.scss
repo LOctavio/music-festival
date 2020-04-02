@@ -218,8 +218,9 @@ nav {
   #daily_schedule_title {
     color: $fourth-color;
     font-family: $cocogoose;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: fit-content;
+    font-size: 26px;
   }
 
   #schedule_grid {
@@ -232,7 +233,7 @@ nav {
       background-color: #3b3e45;
       display: flex;
       align-items: center;
-      height: 80px;
+      height: 100px;
 
       > div {
         min-width: 200px;
@@ -265,5 +266,25 @@ nav {
     padding: 30px 50px;
     font-family: $cocogoose;
     font-size: 16px;
+  }
+}
+
+#djs_list {
+  padding: 30px $padding-page 0 $padding-page;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #djs_list_title {
+    color: $first-color;
+    font-family: $cocogoose;
+    margin-bottom: 10px;
+    width: fit-content;
+    font-size: 26px;
+  }
+
+  #djs_grid {
+    display: grid;
+    gap: 60px;
   }
 }
