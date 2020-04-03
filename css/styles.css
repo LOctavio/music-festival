@@ -294,13 +294,14 @@ hr {
 #main_section {
   padding-top: 80px;
   padding-bottom: 80px;
+  background-color: #d3d3d3;
 }
 
 #main_section div {
   margin-top: 30px;
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #272a31;
+  border: 2px solid #fcfcfc;
   max-width: 500px;
 }
 
@@ -417,6 +418,7 @@ hr {
           align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  background-color: #d3d3d3;
 }
 
 #djs_list_title {
