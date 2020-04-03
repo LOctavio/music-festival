@@ -281,6 +281,15 @@ hr {
   max-width: 900px;
 }
 
+.red_button {
+  border: none;
+  background-color: #ec5242;
+  color: #fcfcfc;
+  padding: 30px 60px;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
 /* index.html file starts */
 #main_section {
   padding-top: 80px;
@@ -325,15 +334,6 @@ hr {
 
 #daily_schedule_title {
   color: #fcfcfc;
-}
-
-#daily_schedule #buy_tickets_button {
-  border: none;
-  background-color: #ec5242;
-  color: #fcfcfc;
-  padding: 30px 50px;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
-  font-size: 16px;
 }
 
 #schedule_grid {
@@ -568,10 +568,15 @@ hr {
 
 #select_lunch {
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #select_lunch_tittle {
   color: #272a31;
+}
+
+#select_lunch button {
+  margin-top: 20px;
 }
 
 .lunch_menu {
