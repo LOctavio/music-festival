@@ -155,12 +155,12 @@ html {
           box-sizing: inherit;
 }
 
-#first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets {
+#first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-#daily_schedule_title, #djs_list_title, #select_tickets_title {
+#daily_schedule_title, #djs_list_title, #select_tickets_title, #select_lunch_tittle {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
   width: -webkit-fit-content;
@@ -170,7 +170,7 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  #first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets {
+  #first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch {
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -458,7 +458,7 @@ hr {
 
 /* index.html file ends */
 /* tickets.html file starts */
-#select_tickets {
+#select_tickets, #select_lunch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -469,6 +469,9 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#select_tickets {
   background-color: #d3d3d3;
   padding-top: 30px;
   padding-bottom: 60px;
@@ -489,6 +492,7 @@ hr {
   padding: 10px 20px;
   border-radius: 20px;
   border: 1px solid #272a31;
+  margin-bottom: 30px;
 }
 
 .step_number {
@@ -510,7 +514,6 @@ hr {
   width: 100%;
   max-width: 800px;
   border: 5px dashed #ec5242;
-  margin-top: 30px;
   -ms-grid-rows: 40px 40px 60px 60px;
       grid-template-rows: 40px 40px 60px 60px;
 }
@@ -554,6 +557,7 @@ hr {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-column: 3/5;
+  line-height: 15px;
 }
 
 .ticket_price {
@@ -561,5 +565,51 @@ hr {
   color: #ec5242;
 }
 
-/* index.html file starts */
+#select_lunch {
+  padding-top: 40px;
+}
+
+#select_lunch_tittle {
+  color: #272a31;
+}
+
+.lunch_menu {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #272a31;
+}
+
+.lunch_day {
+  text-align: center;
+  line-height: 30px;
+  background-color: #d3d3d3;
+  height: 30px;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+}
+
+.menu_options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100px;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+
+.menu_options .option {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .menu_options {
+    padding: 0 60px;
+  }
+}
+
+/* tickets.html file ends */
 /*# sourceMappingURL=styles.css.map */

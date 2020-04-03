@@ -440,10 +440,15 @@ hr {
 
 /* tickets.html file starts */
 
-#select_tickets {
+%flex-shared {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#select_tickets {
+  @extend %flex-shared;
+
   background-color: $third-color;
 
   @extend %padding-shared;
@@ -465,6 +470,7 @@ hr {
   padding: 10px 20px;
   border-radius: 20px;
   border: 1px solid $first-color;
+  margin-bottom: 30px;
 
   &_number {
     min-width: 90px;
@@ -483,7 +489,6 @@ hr {
   width: 100%;
   max-width: 800px;
   border: 5px dashed $second-color;
-  margin-top: 30px;
   grid-template-rows: 40px 40px 60px 60px;
 
   .select_tickets_row {
@@ -515,6 +520,7 @@ hr {
 
 #several_days_ticket {
   grid-column: 3/5;
+  line-height: 15px;
 }
 
 .ticket_price {
@@ -522,4 +528,49 @@ hr {
   color: $second-color;
 }
 
-/* index.html file starts */
+#select_lunch {
+  @extend %flex-shared;
+  @extend %padding-shared;
+
+  padding-top: 40px;
+
+  &_tittle {
+    @extend %title-shared;
+
+    color: $first-color;
+  }
+}
+
+.lunch_menu {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid $first-color;
+}
+
+.lunch_day {
+  text-align: center;
+  line-height: 30px;
+  background-color: $third-color;
+  height: 30px;
+  font-family: $cocogoose;
+}
+
+.menu_options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  font-family: $lato;
+
+  .option {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu_options {
+    padding: 0 60px;
+  }
+}
+
+/* tickets.html file ends */
