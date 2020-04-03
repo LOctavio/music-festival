@@ -2,10 +2,12 @@
   font-family: "cocogoose";
   src: url("../fonts/cocogoose/Cocogoose_trial.otf");
 }
+
 @font-face {
   font-family: "lato-light";
   src: url("../fonts/lato/Lato-Light.ttf");
 }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -132,7 +134,7 @@ blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -142,26 +144,38 @@ table {
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
-#djs_list, #daily_schedule, #main_section, #second_navbar, #first_navbar {
+#first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets {
   padding-left: 25px;
   padding-right: 25px;
 }
 
+#daily_schedule_title, #djs_list_title, #select_tickets_title {
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 26px;
+}
+
 @media screen and (min-width: 768px) {
-  #djs_list, #daily_schedule, #main_section, #second_navbar, #first_navbar {
+  #first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets {
     padding-left: 120px;
     padding-right: 120px;
   }
 }
+
 hr {
   width: 40px;
   border: 1px solid #ec5242;
@@ -170,6 +184,7 @@ hr {
 #first_navbar {
   display: none;
 }
+
 #first_navbar a {
   color: #fcfcfc;
   text-decoration: none;
@@ -179,70 +194,98 @@ hr {
 
 #second_navbar {
   padding-top: 15px;
+  padding-bottom: 20px;
 }
-#second_navbar i[class$=fa-bars] {
+
+#second_navbar i[class$="fa-bars"] {
   margin-left: 10px;
   font-size: 40px;
   color: #272a31;
 }
+
 #second_navbar a {
   display: none;
   color: #272a31;
   text-decoration: none;
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
+
 #second_navbar #logo {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   font-size: 36px;
   color: #272a31;
 }
+
 #second_navbar ul {
   display: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
+
 #second_navbar ul li {
   padding: 10px 20px;
 }
 
 @media screen and (min-width: 768px) {
   #first_navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 30px;
     background-color: #272a31;
   }
   #first_navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
-
   #second_navbar {
     padding-top: 0;
+    padding-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80px;
   }
-  #second_navbar i[class$=fa-bars] {
+  #second_navbar i[class$="fa-bars"] {
     display: none;
   }
   #second_navbar a {
     display: inline;
   }
   #second_navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
+
+/* index.html file starts */
 #main_section {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
 #main_section #main_title {
   font-size: 30px;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #ec5242;
 }
+
 #main_section div {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -250,11 +293,13 @@ hr {
   border: 1px solid #272a31;
   max-width: 500px;
 }
+
 #main_section div #main_description {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
   line-height: 30px;
   color: #272a31;
 }
+
 #main_section #date_festival {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #272a31;
@@ -265,17 +310,22 @@ hr {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #272a31;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #daily_schedule_title {
   color: #fcfcfc;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
-  width: fit-content;
-  font-size: 26px;
 }
+
 #daily_schedule #buy_tickets_button {
   border: none;
   background-color: #ec5242;
@@ -286,41 +336,59 @@ hr {
 }
 
 #schedule_grid {
+  display: -ms-grid;
   display: grid;
   gap: 10px;
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
 #schedule_grid > article {
   background-color: #3b3e45;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100px;
 }
+
 #schedule_grid > article > div {
   min-width: 200px;
   text-align: center;
   line-height: 30px;
 }
+
 #schedule_grid > article > div h3 {
   color: #ec5242;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
+
 #schedule_grid > article > div p {
   color: #fcfcfc;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
+
 #schedule_grid > article span {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   color: #fcfcfc;
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
+
 @media screen and (min-width: 768px) {
   #schedule_grid > article {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 180px;
     text-align: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #schedule_grid > article > div {
     min-width: 100px;
@@ -329,49 +397,169 @@ hr {
 
 @media screen and (min-width: 768px) {
   #schedule_grid {
-    grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 3px;
   }
 }
+
 #djs_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 #djs_list_title {
   color: #272a31;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
-  width: fit-content;
-  font-size: 26px;
 }
 
 #djs_grid {
+  display: -ms-grid;
   display: grid;
   gap: 30px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
 #djs_grid article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-#djs_grid article img[alt^=dj] {
+
+#djs_grid article img[alt^="dj"] {
   max-height: 109px;
   border: 1px solid #272a31;
 }
+
 #djs_grid article > div {
   padding-left: 20px;
 }
+
 #djs_grid article > div h2 {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
 @media screen and (min-width: 768px) {
   #djs_grid {
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
+/* index.html file ends */
+/* tickets.html file starts */
+#select_tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d3d3d3;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+#select_tickets_title {
+  color: #272a31;
+}
+
+.step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #272a31;
+}
+
+.step_number {
+  min-width: 90px;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  color: #ec5242;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.step_description {
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+
+#select_tickets_grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  max-width: 800px;
+  border: 5px dashed #ec5242;
+  margin-top: 30px;
+  -ms-grid-rows: 40px 40px 60px 60px;
+      grid-template-rows: 40px 40px 60px 60px;
+}
+
+#select_tickets_grid .select_tickets_row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#select_tickets_grid .select_tickets_row > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #fcfcfc;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+
+#select_tickets_grid .select_tickets_row > div:last-child {
+  border-right: none;
+}
+
+#select_tickets_grid .select_tickets_row:first-child > div {
+  background-color: inherit;
+}
+
+#several_days_ticket {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+}
+
+.ticket_price {
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  color: #ec5242;
+}
+
+/* index.html file starts */
 /*# sourceMappingURL=styles.css.map */

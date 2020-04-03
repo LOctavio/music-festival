@@ -170,6 +170,13 @@ $lato: "lato-light", Arial, Helvetica, sans-serif;
   @include padding(25px);
 }
 
+%title-shared {
+  font-family: $cocogoose;
+  margin-bottom: 10px;
+  width: fit-content;
+  font-size: 26px;
+}
+
 @media screen and (min-width: 768px) {
   %padding-shared {
     @include padding(120px);
@@ -198,6 +205,7 @@ hr {
   @extend %padding-shared;
 
   padding-top: 15px;
+  padding-bottom: 20px;
 
   i[class$="fa-bars"] {
     margin-left: 10px;
@@ -243,6 +251,7 @@ hr {
 
   #second_navbar {
     padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -261,6 +270,8 @@ hr {
     }
   }
 }
+
+/* index.html file starts */
 
 #main_section {
   padding-top: 80px;
@@ -308,11 +319,9 @@ hr {
   align-items: center;
 
   &_title {
+    @extend %title-shared;
+
     color: $fourth-color;
-    font-family: $cocogoose;
-    margin-bottom: 10px;
-    width: fit-content;
-    font-size: 26px;
   }
 
   #buy_tickets_button {
@@ -376,7 +385,7 @@ hr {
 
 @media screen and (min-width: 768px) {
   #schedule_grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 3px;
   }
 }
@@ -392,10 +401,8 @@ hr {
 
   &_title {
     color: $first-color;
-    font-family: $cocogoose;
-    margin-bottom: 10px;
-    width: fit-content;
-    font-size: 26px;
+
+    @extend %title-shared;
   }
 }
 
@@ -425,6 +432,94 @@ hr {
 
 @media screen and (min-width: 768px) {
   #djs_grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
+
+/* index.html file ends */
+
+/* tickets.html file starts */
+
+#select_tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $third-color;
+
+  @extend %padding-shared;
+
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  &_title {
+    @extend %title-shared;
+
+    color: $first-color;
+  }
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid $first-color;
+
+  &_number {
+    min-width: 90px;
+    font-family: $cocogoose;
+    color: $second-color;
+    height: fit-content;
+  }
+
+  &_description {
+    font-family: $lato;
+  }
+}
+
+#select_tickets_grid {
+  display: grid;
+  width: 100%;
+  max-width: 800px;
+  border: 5px dashed $second-color;
+  margin-top: 30px;
+  grid-template-rows: 40px 40px 60px 60px;
+
+  .select_tickets_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      background-color: $fourth-color;
+      font-family: $lato;
+    }
+
+    > div:last-child {
+      border-right: none;
+    }
+  }
+
+  .select_tickets_row:first-child {
+    > div {
+      background-color: inherit;
+    }
+  }
+}
+
+#several_days_ticket {
+  grid-column: 3/5;
+}
+
+.ticket_price {
+  font-family: $cocogoose;
+  color: $second-color;
+}
+
+/* index.html file starts */
