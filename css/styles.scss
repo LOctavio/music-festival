@@ -272,7 +272,7 @@ hr {
 }
 
 #main_title {
-  font-size: 50px;
+  font-size: 44px;
   font-family: $cocogoose;
   text-transform: uppercase;
   color: $second-color;
@@ -609,3 +609,25 @@ hr {
 }
 
 /* about.html file ends */
+
+footer {
+  @extend %padding-shared;
+
+  display: flex;
+  align-items: center;
+  background-color: $first-color;
+  height: 150px;
+
+  #logo2 {
+    font-family: $cocogoose;
+    color: $fourth-color;
+    font-size: 40px;
+    text-decoration: none;
+  }
+
+  #rights_text {
+    padding-left: 20px;
+    color: $fourth-color;
+    font-family: $lato;
+  }
+}

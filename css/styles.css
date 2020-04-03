@@ -155,7 +155,7 @@ html {
           box-sizing: inherit;
 }
 
-#first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch, #about_festival {
+#first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch, #about_festival, footer {
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -170,7 +170,7 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  #first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch, #about_festival {
+  #first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch, #about_festival, footer {
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -274,7 +274,7 @@ hr {
 }
 
 #main_title {
-  font-size: 50px;
+  font-size: 44px;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #ec5242;
@@ -642,4 +642,27 @@ hr {
 }
 
 /* about.html file ends */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #272a31;
+  height: 150px;
+}
+
+footer #logo2 {
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  color: #fcfcfc;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+footer #rights_text {
+  padding-left: 20px;
+  color: #fcfcfc;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
 /*# sourceMappingURL=styles.css.map */
