@@ -155,7 +155,7 @@ html {
           box-sizing: inherit;
 }
 
-#first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch {
+#first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch, #about_festival {
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -170,7 +170,7 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  #first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch {
+  #first_navbar, #second_navbar, #main_section, #daily_schedule, #djs_list, #select_tickets, #select_lunch, #about_festival {
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -273,17 +273,18 @@ hr {
   }
 }
 
+#main_title {
+  font-size: 50px;
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #ec5242;
+  max-width: 900px;
+}
+
 /* index.html file starts */
 #main_section {
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-#main_section #main_title {
-  font-size: 30px;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  color: #ec5242;
 }
 
 #main_section div {
@@ -303,7 +304,7 @@ hr {
 #main_section #date_festival {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #272a31;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #daily_schedule {
@@ -458,7 +459,7 @@ hr {
 
 /* index.html file ends */
 /* tickets.html file starts */
-#select_tickets, #select_lunch {
+#select_tickets, #select_lunch, #about_festival {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,4 +613,33 @@ hr {
 }
 
 /* tickets.html file ends */
+/* about.html file starts */
+#about_festival {
+  text-align: center;
+  padding-top: 80px;
+  background-color: #d3d3d3;
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+  padding-bottom: 60px;
+}
+
+#about_festival #main_title {
+  margin-bottom: 30px;
+}
+
+#about_festival #email {
+  line-height: 40px;
+  color: black;
+  font-weight: 900;
+}
+
+#info_festival_container {
+  max-width: 900px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 20px 40px;
+  background-color: #fcfcfc;
+  line-height: 30px;
+}
+
+/* about.html file ends */
 /*# sourceMappingURL=styles.css.map */

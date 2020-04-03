@@ -271,6 +271,14 @@ hr {
   }
 }
 
+#main_title {
+  font-size: 50px;
+  font-family: $cocogoose;
+  text-transform: uppercase;
+  color: $second-color;
+  max-width: 900px;
+}
+
 /* index.html file starts */
 
 #main_section {
@@ -278,13 +286,6 @@ hr {
   padding-bottom: 80px;
 
   @extend %padding-shared;
-
-  #main_title {
-    font-size: 30px;
-    font-family: $cocogoose;
-    text-transform: uppercase;
-    color: $second-color;
-  }
 
   div {
     margin-top: 30px;
@@ -303,7 +304,7 @@ hr {
   #date_festival {
     font-family: $cocogoose;
     color: $first-color;
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -574,3 +575,37 @@ hr {
 }
 
 /* tickets.html file ends */
+
+/* about.html file starts */
+
+#about_festival {
+  @extend %flex-shared;
+  @extend %padding-shared;
+
+  text-align: center;
+  padding-top: 80px;
+  background-color: $third-color;
+  font-family: $lato;
+  padding-bottom: 60px;
+
+  #main_title {
+    margin-bottom: 30px;
+  }
+
+  #email {
+    line-height: 40px;
+    color: black;
+    font-weight: 900;
+  }
+}
+
+#info_festival_container {
+  max-width: 900px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 20px 40px;
+  background-color: $fourth-color;
+  line-height: 30px;
+}
+
+/* about.html file ends */
