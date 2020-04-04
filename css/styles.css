@@ -227,6 +227,18 @@ hr {
   padding: 10px 20px;
 }
 
+#second_navbar ul li:hover {
+  background-color: #272a31;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+#second_navbar ul li:hover a {
+  color: #fcfcfc;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 @media screen and (min-width: 768px) {
   #first_navbar {
     display: -webkit-box;
@@ -288,6 +300,12 @@ hr {
   padding: 30px 60px;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   font-size: 16px;
+}
+
+.red_button:hover {
+  color: #272a31;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 /* index.html file starts */
@@ -380,6 +398,18 @@ hr {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
+#schedule_grid > article:hover {
+  background-color: #ec5242;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+#schedule_grid > article:hover h3 {
+  color: black;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 @media screen and (min-width: 768px) {
   #schedule_grid > article {
     -webkit-box-orient: vertical;
@@ -433,26 +463,27 @@ hr {
   margin-bottom: 30px;
 }
 
-#djs_grid article {
+#djs_grid .djs_grid_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#djs_grid article img[alt^="dj"] {
+#djs_grid .djs_grid_item img[alt^="dj"] {
   max-height: 109px;
   border: 1px solid #272a31;
 }
 
-#djs_grid article > div {
+#djs_grid .djs_grid_item > div {
   padding-left: 20px;
 }
 
-#djs_grid article > div h2 {
+#djs_grid .djs_grid_item > div h2 {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
 }
 
-#djs_grid article > div p {
+#djs_grid .djs_grid_item > div p {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
@@ -513,6 +544,18 @@ hr {
 
 .step_description {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+
+.step:hover {
+  background-color: #ec5242;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.step:hover .step_number {
+  color: #272a31;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 #select_tickets_grid {

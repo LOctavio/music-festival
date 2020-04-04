@@ -233,6 +233,16 @@ hr {
     li {
       padding: 10px 20px;
     }
+
+    li:hover {
+      background-color: $first-color;
+      transition-duration: 0.5s;
+
+      a {
+        color: $fourth-color;
+        transition-duration: 0.5s;
+      }
+    }
   }
 }
 
@@ -286,6 +296,11 @@ hr {
   padding: 30px 60px;
   font-family: $cocogoose;
   font-size: 16px;
+}
+
+.red_button:hover {
+  color: $first-color;
+  transition-duration: 0.5s;
 }
 
 /* index.html file starts */
@@ -371,6 +386,16 @@ hr {
     }
   }
 
+  > article:hover {
+    background-color: $second-color;
+    transition-duration: 0.5s;
+
+    h3 {
+      color: black;
+      transition-duration: 0.5s;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     > article {
       flex-direction: column;
@@ -415,7 +440,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 30px;
 
-  article {
+  .djs_grid_item {
     display: flex;
 
     img[alt^="dj"] {
@@ -428,6 +453,7 @@ hr {
 
       h2 {
         font-family: $cocogoose;
+        margin-bottom: 10px;
       }
 
       p {
@@ -488,6 +514,16 @@ hr {
 
   &_description {
     font-family: $lato;
+  }
+}
+
+.step:hover {
+  background-color: $second-color;
+  transition-duration: 0.5s;
+
+  .step_number {
+    color: $first-color;
+    transition-duration: 0.5s;
   }
 }
 
