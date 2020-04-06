@@ -208,7 +208,7 @@ html {
           justify-content: center;
 }
 
-.first_navbar a, .second_navbar a, .main_section div .main_description, .schedule_grid > article span, .djs_grid_item .djs_description p, .step_description, .select_tickets_grid .select_tickets_row > div, .menu_options, .about_festival, footer .rights_text {
+.first_navbar a, .second_navbar .campaign_button, .second_navbar a, .main_section div .main_description, .schedule_grid > article span, .djs_grid_item .djs_description p, .step_description, .select_tickets_grid .select_tickets_row > div, .menu_options, .about_festival, footer .rights_text {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
@@ -236,6 +236,15 @@ hr {
   padding-bottom: 20px;
 }
 
+.second_navbar .campaign_button {
+  display: none;
+  border: 4px solid #ec5242;
+  background-color: transparent;
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
 .second_navbar i[class$="fa-bars"] {
   margin-left: 10px;
   font-size: 40px;
@@ -261,6 +270,7 @@ hr {
 
 .second_navbar ul li {
   padding: 10px 20px;
+  margin: 0 20px;
 }
 
 .second_navbar ul li:hover {
@@ -298,6 +308,9 @@ hr {
         -ms-flex-align: center;
             align-items: center;
     height: 80px;
+  }
+  .second_navbar .campaign_button {
+    display: block;
   }
   .second_navbar i[class$="fa-bars"] {
     display: none;

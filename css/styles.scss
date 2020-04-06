@@ -239,6 +239,17 @@ hr {
   padding-top: 15px;
   padding-bottom: 20px;
 
+  .campaign_button {
+    @extend %lato;
+
+    display: none;
+    border: 4px solid $second-color;
+    background-color: transparent;
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 0 20px;
+  }
+
   i[class$="fa-bars"] {
     margin-left: 10px;
     font-size: 40px;
@@ -265,6 +276,7 @@ hr {
 
     li {
       padding: 10px 20px;
+      margin: 0 20px;
     }
 
     li:hover {
@@ -298,6 +310,10 @@ hr {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+
+    .campaign_button {
+      display: block;
+    }
 
     i[class$="fa-bars"] {
       display: none;
