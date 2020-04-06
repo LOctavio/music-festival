@@ -155,18 +155,14 @@ html {
           box-sizing: inherit;
 }
 
+.schedule_grid, .djs_grid, .select_tickets_grid, .select_tickets_grid .select_tickets_row {
+  display: -ms-grid;
+  display: grid;
+}
+
 .first_navbar, .second_navbar, .main_section, .daily_schedule, .djs_list, .select_tickets, .select_lunch, .about_festival, footer {
   padding-left: 25px;
   padding-right: 25px;
-}
-
-.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle {
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 26px;
 }
 
 @media screen and (min-width: 768px) {
@@ -174,6 +170,50 @@ html {
     padding-left: 120px;
     padding-right: 120px;
   }
+}
+
+.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle {
+  margin-bottom: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 26px;
+}
+
+.second_navbar ul li:hover, .red_button:hover, .schedule_grid > article:hover, .step:hover {
+  cursor: pointer;
+}
+
+.second_navbar ul li:hover, .second_navbar ul li:hover a, .red_button:hover, .schedule_grid > article:hover, .schedule_grid > article:hover h3, .step:hover, .step:hover .step_number {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex_column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.first_navbar a, .second_navbar a, .main_section div .main_description, .schedule_grid > article span, .djs_grid_item .djs_description p, .step_description, .select_tickets_grid .select_tickets_row > div, .menu_options, .about_festival, footer .rights_text {
+  font-family: "lato-light", Arial, Helvetica, sans-serif;
+}
+
+.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle, .second_navbar .logo, .main_title, .red_button, .main_section .date_festival, .schedule_grid > article > div h3, .schedule_grid > article > div p, .djs_grid_item .djs_description h2, .step_number, .ticket_price, .lunch_day, footer .logo2 {
+  font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
 hr {
@@ -189,7 +229,6 @@ hr {
   color: #fcfcfc;
   text-decoration: none;
   padding: 0 10px;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 .second_navbar {
@@ -207,17 +246,14 @@ hr {
   display: none;
   color: #272a31;
   text-decoration: none;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 .second_navbar .logo {
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   font-size: 36px;
   color: #272a31;
 }
 
 .second_navbar ul {
-  display: none;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -229,14 +265,10 @@ hr {
 
 .second_navbar ul li:hover {
   background-color: #272a31;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .second_navbar ul li:hover a {
   color: #fcfcfc;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
@@ -252,11 +284,6 @@ hr {
             align-items: center;
     height: 30px;
     background-color: #272a31;
-  }
-  .first_navbar ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .second_navbar {
     padding-top: 0;
@@ -278,16 +305,10 @@ hr {
   .second_navbar a {
     display: inline;
   }
-  .second_navbar ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .main_title {
   font-size: 44px;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: #ec5242;
   max-width: 900px;
@@ -298,21 +319,18 @@ hr {
   background-color: #ec5242;
   color: #fcfcfc;
   padding: 30px 60px;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
 .red_button:hover {
   color: #272a31;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 /* index.html file starts */
 .main_section {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #d3d3d3;
+  background-color: #f7f7f7;
 }
 
 .main_section div {
@@ -324,13 +342,11 @@ hr {
 }
 
 .main_section div .main_description {
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
   line-height: 30px;
   color: #272a31;
 }
 
 .main_section .date_festival {
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #272a31;
   font-size: 30px;
 }
@@ -339,16 +355,6 @@ hr {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #272a31;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .daily_schedule_title {
@@ -356,8 +362,6 @@ hr {
 }
 
 .schedule_grid {
-  display: -ms-grid;
-  display: grid;
   gap: 10px;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -365,9 +369,6 @@ hr {
 
 .schedule_grid > article {
   background-color: #3b3e45;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -382,12 +383,10 @@ hr {
 
 .schedule_grid > article > div h3 {
   color: #ec5242;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
 .schedule_grid > article > div p {
   color: #fcfcfc;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
 .schedule_grid > article span {
@@ -395,19 +394,14 @@ hr {
   height: -moz-fit-content;
   height: fit-content;
   color: #fcfcfc;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 .schedule_grid > article:hover {
   background-color: #ec5242;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .schedule_grid > article:hover h3 {
   color: black;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
@@ -436,19 +430,8 @@ hr {
 }
 
 .djs_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #d3d3d3;
 }
 
 .djs_list_title {
@@ -456,17 +439,9 @@ hr {
 }
 
 .djs_grid {
-  display: -ms-grid;
-  display: grid;
   gap: 30px;
   margin-top: 20px;
   margin-bottom: 30px;
-}
-
-.djs_grid_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .djs_grid_item img[alt^="dj"] {
@@ -479,12 +454,7 @@ hr {
 }
 
 .djs_grid_item .djs_description h2 {
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
-}
-
-.djs_grid_item .djs_description p {
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -496,21 +466,8 @@ hr {
 
 /* index.html file ends */
 /* tickets.html file starts */
-.select_tickets, .select_lunch, .about_festival {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .select_tickets {
-  background-color: #d3d3d3;
+  background-color: #f7f7f7;
   padding-top: 30px;
   padding-bottom: 60px;
 }
@@ -520,12 +477,6 @@ hr {
 }
 
 .step {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 20px;
   padding: 10px 20px;
   border-radius: 20px;
@@ -535,32 +486,21 @@ hr {
 
 .step_number {
   min-width: 90px;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #ec5242;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.step_description {
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
-}
-
 .step:hover {
   background-color: #ec5242;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .step:hover .step_number {
   color: #272a31;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .select_tickets_grid {
-  display: -ms-grid;
-  display: grid;
   width: 100%;
   max-width: 800px;
   border: 5px dashed #ec5242;
@@ -569,30 +509,14 @@ hr {
 }
 
 .select_tickets_grid .select_tickets_row {
-  display: -ms-grid;
-  display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .select_tickets_grid .select_tickets_row > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   background-color: #fcfcfc;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 .select_tickets_grid .select_tickets_row > div:last-child {
@@ -611,7 +535,6 @@ hr {
 }
 
 .ticket_price {
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #ec5242;
 }
 
@@ -639,13 +562,9 @@ hr {
   line-height: 30px;
   background-color: #d3d3d3;
   height: 30px;
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
 .menu_options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -653,7 +572,6 @@ hr {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100px;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 .menu_options .option {
@@ -671,8 +589,7 @@ hr {
 .about_festival {
   text-align: center;
   padding-top: 80px;
-  background-color: #d3d3d3;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
   padding-bottom: 60px;
 }
 
@@ -697,9 +614,6 @@ hr {
 
 /* about.html file ends */
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -708,7 +622,6 @@ footer {
 }
 
 footer .logo2 {
-  font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #fcfcfc;
   font-size: 40px;
   text-decoration: none;
@@ -717,6 +630,5 @@ footer .logo2 {
 footer .rights_text {
   padding-left: 20px;
   color: #fcfcfc;
-  font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 /*# sourceMappingURL=styles.css.map */

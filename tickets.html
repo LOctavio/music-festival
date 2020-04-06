@@ -9,7 +9,7 @@
 </head>
 <body>
   <nav class="first_navbar">
-    <ul>
+    <ul class="flex">
       <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
       <li><a href="#"><i class="fab fa-twitter"></i></a></li>
       <li><a href="#">English</a></li>
@@ -17,16 +17,16 @@
       <li><a href="#">Log out</a></li>
     </ul>
   </nav>
-  <nav class="second_navbar">
+  <nav class="second_navbar flex">
     <i class="fas fa-bars"></i>
     <a href="./index.html" class="logo">SEMF</a>
-    <ul>
+    <ul class="flex">
       <li><a href="./about.html">About</a></li>
       <li><a href="./tickets.html">Tickets</a></li>
     </ul>
   </nav>
   <main>
-    <section class="select_tickets">
+    <section class="select_tickets flex flex_column">
       <h2 class="select_tickets_title">Select Tickets</h2>
       <hr>
       <div class="step">
@@ -35,53 +35,53 @@
       </div>
       <div class="select_tickets_grid">
         <div class="select_tickets_row">
-          <div>Ticket</div>
-          <div>1-Day-Ticket</div>
-          <div>2-Day-Ticket</div>
-          <div>3-Day-Ticket</div>
+          <div class="flex flex_column">Ticket</div>
+          <div class="flex flex_column">1-Day-Ticket</div>
+          <div class="flex flex_column">2-Day-Ticket</div>
+          <div class="flex flex_column">3-Day-Ticket</div>
         </div>
         <div class="select_tickets_row">
-          <div>Benefits</div>
-          <div>Lunch</div>
-          <div class="several_days_ticket">
+          <div class="flex flex_column">Benefits</div>
+          <div class="flex flex_column">Lunch</div>
+          <div class="several_days_ticket flex flex_column">
             <p>Lunch & Tent</p>
           </div>
         </div>
         <div class="select_tickets_row">
-          <div>Normal</div>
-          <div>
+          <div class="flex flex_column">Normal</div>
+          <div class="flex flex_column">
             <p class="ticket_price">$3000</p>
             <input type="radio" checked="checked" name="radio">
           </div>
           
-          <div>
+          <div class="flex flex_column">
             <p class="ticket_price">$5000</p>
             <input type="radio" name="radio">
           </div>
           
-          <div>
+          <div class="flex flex_column">
             <p class="ticket_price">$6500</p>
             <input type="radio" name="radio">
           </div>
         </div>
         <div class="select_tickets_row">
-          <div>Students</div>
-          <div>
+          <div class="flex flex_column">Students</div>
+          <div class="flex flex_column">
             <p class="ticket_price">$2000</p>
             <input type="radio" checked="checked" name="radio2">
           </div>
-          <div>
+          <div class="flex flex_column">
             <p class="ticket_price">$3500</p>
             <input type="radio" name="radio2">
           </div>
-          <div>
+          <div class="flex flex_column">
             <p class="ticket_price">$5000</p>
             <input type="radio" name="radio2">
           </div>
         </div>
       </div>
     </section>
-    <section class="select_lunch">
+    <section class="select_lunch flex flex_column">
       <h2 class="select_lunch_tittle">Select Your lunch</h2>
       <hr>
       <div class="step">
@@ -92,7 +92,7 @@
         <div class="lunch_day">
           <span>Day 1</span>
         </div>
-        <div class="menu_options">
+        <div class="menu_options flex">
           <div class="option">
             <span>menu 1</span>
             <input type="radio" checked="checked" name="menu">
@@ -172,7 +172,7 @@
       <button class="red_button">Submit</button>
     </section>
   </main>
-  <footer>
+  <footer class="flex">
     <a href="./index.html" class="logo2">SEMF</a>
     <span class="rights_text">2020 Summer Electronic Music Festival. Some Rights Reserved.</span>
   </footer>

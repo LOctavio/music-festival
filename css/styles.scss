@@ -166,21 +166,52 @@ $lato: "lato-light", Arial, Helvetica, sans-serif;
   padding-right: $padding-page;
 }
 
-%padding-shared {
-  @include padding(25px);
+%display-grid {
+  display: grid;
 }
 
-%title-shared {
-  font-family: $cocogoose;
-  margin-bottom: 10px;
-  width: fit-content;
-  font-size: 26px;
+%padding-shared {
+  @include padding(25px);
 }
 
 @media screen and (min-width: 768px) {
   %padding-shared {
     @include padding(120px);
   }
+}
+
+%title-shared {
+  @extend %cocogoose;
+
+  margin-bottom: 10px;
+  width: fit-content;
+  font-size: 26px;
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}
+
+%transition-duration {
+  transition-duration: 0.5s;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_column {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+%lato {
+  font-family: $lato;
+}
+
+%cocogoose {
+  font-family: $cocogoose;
 }
 
 hr {
@@ -197,7 +228,8 @@ hr {
     color: $fourth-color;
     text-decoration: none;
     padding: 0 10px;
-    font-family: $lato;
+
+    @extend %lato;
   }
 }
 
@@ -217,17 +249,18 @@ hr {
     display: none;
     color: $first-color;
     text-decoration: none;
-    font-family: $lato;
+
+    @extend %lato;
   }
 
   .logo {
-    font-family: $cocogoose;
+    @extend %cocogoose;
+
     font-size: 36px;
     color: $first-color;
   }
 
   ul {
-    display: none;
     height: fit-content;
 
     li {
@@ -236,11 +269,14 @@ hr {
 
     li:hover {
       background-color: $first-color;
-      transition-duration: 0.5s;
+
+      @extend %transition-duration;
+      @extend %cursor-pointer;
 
       a {
         color: $fourth-color;
-        transition-duration: 0.5s;
+
+        @extend %transition-duration;
       }
     }
   }
@@ -253,10 +289,6 @@ hr {
     align-items: center;
     height: 30px;
     background-color: $first-color;
-
-    ul {
-      display: flex;
-    }
   }
 
   .second_navbar {
@@ -274,16 +306,14 @@ hr {
     a {
       display: inline;
     }
-
-    ul {
-      display: flex;
-    }
   }
 }
 
 .main_title {
   font-size: 44px;
-  font-family: $cocogoose;
+
+  @extend %cocogoose;
+
   text-transform: uppercase;
   color: $second-color;
   max-width: 900px;
@@ -294,13 +324,17 @@ hr {
   background-color: $second-color;
   color: $fourth-color;
   padding: 30px 60px;
-  font-family: $cocogoose;
+
+  @extend %cocogoose;
+
   font-size: 16px;
 }
 
 .red_button:hover {
   color: $first-color;
-  transition-duration: 0.5s;
+
+  @extend %transition-duration;
+  @extend %cursor-pointer;
 }
 
 /* index.html file starts */
@@ -308,7 +342,7 @@ hr {
 .main_section {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: $third-color;
+  background-color: #f7f7f7;
 
   @extend %padding-shared;
 
@@ -320,14 +354,16 @@ hr {
     max-width: 500px;
 
     .main_description {
-      font-family: $lato;
+      @extend %lato;
+
       line-height: 30px;
       color: $first-color;
     }
   }
 
   .date_festival {
-    font-family: $cocogoose;
+    @extend %cocogoose;
+
     color: $first-color;
     font-size: 30px;
   }
@@ -340,9 +376,6 @@ hr {
   @extend %padding-shared;
 
   background-color: $first-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   &_title {
     @extend %title-shared;
@@ -352,14 +385,14 @@ hr {
 }
 
 .schedule_grid {
-  display: grid;
+  @extend %display-grid;
+
   gap: 10px;
   margin-top: 20px;
   margin-bottom: 50px;
 
   > article {
     background-color: #3b3e45;
-    display: flex;
     align-items: center;
     height: 100px;
 
@@ -369,30 +402,36 @@ hr {
       line-height: 30px;
 
       h3 {
+        @extend %cocogoose;
+
         color: $second-color;
-        font-family: $cocogoose;
       }
 
       p {
+        @extend %cocogoose;
+
         color: $fourth-color;
-        font-family: $cocogoose;
       }
     }
 
     span {
       height: fit-content;
       color: $fourth-color;
-      font-family: $lato;
+
+      @extend %lato;
     }
   }
 
   > article:hover {
     background-color: $second-color;
-    transition-duration: 0.5s;
+
+    @extend %transition-duration;
+    @extend %cursor-pointer;
 
     h3 {
       color: black;
-      transition-duration: 0.5s;
+
+      @extend %transition-duration;
     }
   }
 
@@ -420,12 +459,8 @@ hr {
 .djs_list {
   @extend %padding-shared;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: $third-color;
 
   &_title {
     color: $first-color;
@@ -435,14 +470,13 @@ hr {
 }
 
 .djs_grid {
-  display: grid;
+  @extend %display-grid;
+
   gap: 30px;
   margin-top: 20px;
   margin-bottom: 30px;
 
   &_item {
-    display: flex;
-
     img[alt^="dj"] {
       max-height: 109px;
       border: 1px solid $first-color;
@@ -452,12 +486,13 @@ hr {
       padding-left: 20px;
 
       h2 {
-        font-family: $cocogoose;
+        @extend %cocogoose;
+
         margin-bottom: 10px;
       }
 
       p {
-        font-family: $lato;
+        @extend %lato;
       }
     }
   }
@@ -473,16 +508,8 @@ hr {
 
 /* tickets.html file starts */
 
-%flex-shared {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .select_tickets {
-  @extend %flex-shared;
-
-  background-color: $third-color;
+  background-color: #f7f7f7;
 
   @extend %padding-shared;
 
@@ -497,8 +524,6 @@ hr {
 }
 
 .step {
-  display: flex;
-  align-items: center;
   margin-top: 20px;
   padding: 10px 20px;
   border-radius: 20px;
@@ -506,47 +531,50 @@ hr {
   margin-bottom: 30px;
 
   &_number {
+    @extend %cocogoose;
+
     min-width: 90px;
-    font-family: $cocogoose;
     color: $second-color;
     height: fit-content;
   }
 
   &_description {
-    font-family: $lato;
+    @extend %lato;
   }
 }
 
 .step:hover {
   background-color: $second-color;
-  transition-duration: 0.5s;
+
+  @extend %transition-duration;
+  @extend %cursor-pointer;
 
   .step_number {
     color: $first-color;
-    transition-duration: 0.5s;
+
+    @extend %transition-duration;
   }
 }
 
 .select_tickets_grid {
-  display: grid;
+  @extend %display-grid;
+
   width: 100%;
   max-width: 800px;
   border: 5px dashed $second-color;
   grid-template-rows: 40px 40px 60px 60px;
 
   .select_tickets_row {
-    display: grid;
+    @extend %display-grid;
+
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       border-right: 1px solid black;
       border-bottom: 1px solid black;
       background-color: $fourth-color;
-      font-family: $lato;
+
+      @extend %lato;
     }
 
     > div:last-child {
@@ -567,12 +595,12 @@ hr {
 }
 
 .ticket_price {
-  font-family: $cocogoose;
+  @extend %cocogoose;
+
   color: $second-color;
 }
 
 .select_lunch {
-  @extend %flex-shared;
   @extend %padding-shared;
 
   padding-top: 40px;
@@ -596,19 +624,20 @@ hr {
 }
 
 .lunch_day {
+  @extend %cocogoose;
+
   text-align: center;
   line-height: 30px;
   background-color: $third-color;
   height: 30px;
-  font-family: $cocogoose;
 }
 
 .menu_options {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  font-family: $lato;
+
+  @extend %lato;
 
   .option {
     text-align: center;
@@ -626,13 +655,14 @@ hr {
 /* about.html file starts */
 
 .about_festival {
-  @extend %flex-shared;
   @extend %padding-shared;
 
   text-align: center;
   padding-top: 80px;
-  background-color: $third-color;
-  font-family: $lato;
+  background-color: #f7f7f7;
+
+  @extend %lato;
+
   padding-bottom: 60px;
 
   .main_title {
@@ -660,13 +690,13 @@ hr {
 footer {
   @extend %padding-shared;
 
-  display: flex;
   align-items: center;
   background-color: $first-color;
   height: 150px;
 
   .logo2 {
-    font-family: $cocogoose;
+    @extend %cocogoose;
+
     color: $fourth-color;
     font-size: 40px;
     text-decoration: none;
@@ -675,6 +705,7 @@ footer {
   .rights_text {
     padding-left: 20px;
     color: $fourth-color;
-    font-family: $lato;
+
+    @extend %lato;
   }
 }
