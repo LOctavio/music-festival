@@ -444,13 +444,25 @@ hr {
   margin-bottom: 30px;
 }
 
+.djs_grid_item {
+  position: relative;
+  min-height: 129px;
+}
+
+.djs_grid_item img[alt="img-background"] {
+  position: absolute;
+}
+
 .djs_grid_item img[alt^="dj"] {
   max-height: 109px;
   border: 1px solid #272a31;
+  position: absolute;
+  top: 14px;
+  left: 14px;
 }
 
 .djs_grid_item .djs_description {
-  padding-left: 20px;
+  padding-left: 150px;
 }
 
 .djs_grid_item .djs_description h2 {
