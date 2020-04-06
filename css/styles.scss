@@ -188,7 +188,7 @@ hr {
   border: 1px solid $second-color;
 }
 
-#first_navbar {
+.first_navbar {
   @extend %padding-shared;
 
   display: none;
@@ -201,7 +201,7 @@ hr {
   }
 }
 
-#second_navbar {
+.second_navbar {
   @extend %padding-shared;
 
   padding-top: 15px;
@@ -220,7 +220,7 @@ hr {
     font-family: $lato;
   }
 
-  #logo {
+  .logo {
     font-family: $cocogoose;
     font-size: 36px;
     color: $first-color;
@@ -247,7 +247,7 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-  #first_navbar {
+  .first_navbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -259,7 +259,7 @@ hr {
     }
   }
 
-  #second_navbar {
+  .second_navbar {
     padding-top: 0;
     padding-bottom: 0;
     display: flex;
@@ -281,7 +281,7 @@ hr {
   }
 }
 
-#main_title {
+.main_title {
   font-size: 44px;
   font-family: $cocogoose;
   text-transform: uppercase;
@@ -305,7 +305,7 @@ hr {
 
 /* index.html file starts */
 
-#main_section {
+.main_section {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: $third-color;
@@ -319,21 +319,21 @@ hr {
     border: 2px solid $fourth-color;
     max-width: 500px;
 
-    #main_description {
+    .main_description {
       font-family: $lato;
       line-height: 30px;
       color: $first-color;
     }
   }
 
-  #date_festival {
+  .date_festival {
     font-family: $cocogoose;
     color: $first-color;
     font-size: 30px;
   }
 }
 
-#daily_schedule {
+.daily_schedule {
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -351,7 +351,7 @@ hr {
   }
 }
 
-#schedule_grid {
+.schedule_grid {
   display: grid;
   gap: 10px;
   margin-top: 20px;
@@ -411,13 +411,13 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-  #schedule_grid {
+  .schedule_grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 3px;
   }
 }
 
-#djs_list {
+.djs_list {
   @extend %padding-shared;
 
   display: flex;
@@ -434,13 +434,13 @@ hr {
   }
 }
 
-#djs_grid {
+.djs_grid {
   display: grid;
   gap: 30px;
   margin-top: 20px;
   margin-bottom: 30px;
 
-  .djs_grid_item {
+  &_item {
     display: flex;
 
     img[alt^="dj"] {
@@ -448,7 +448,7 @@ hr {
       border: 1px solid $first-color;
     }
 
-    > div {
+    .djs_description {
       padding-left: 20px;
 
       h2 {
@@ -464,7 +464,7 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-  #djs_grid {
+  .djs_grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -479,7 +479,7 @@ hr {
   align-items: center;
 }
 
-#select_tickets {
+.select_tickets {
   @extend %flex-shared;
 
   background-color: $third-color;
@@ -527,7 +527,7 @@ hr {
   }
 }
 
-#select_tickets_grid {
+.select_tickets_grid {
   display: grid;
   width: 100%;
   max-width: 800px;
@@ -561,7 +561,7 @@ hr {
   }
 }
 
-#several_days_ticket {
+.several_days_ticket {
   grid-column: 3/5;
   line-height: 15px;
 }
@@ -571,7 +571,7 @@ hr {
   color: $second-color;
 }
 
-#select_lunch {
+.select_lunch {
   @extend %flex-shared;
   @extend %padding-shared;
 
@@ -625,7 +625,7 @@ hr {
 
 /* about.html file starts */
 
-#about_festival {
+.about_festival {
   @extend %flex-shared;
   @extend %padding-shared;
 
@@ -635,18 +635,18 @@ hr {
   font-family: $lato;
   padding-bottom: 60px;
 
-  #main_title {
+  .main_title {
     margin-bottom: 30px;
   }
 
-  #email {
+  .email {
     line-height: 40px;
     color: black;
     font-weight: 900;
   }
 }
 
-#info_festival_container {
+.info_festival_container {
   max-width: 900px;
   margin-top: 30px;
   margin-bottom: 50px;
@@ -665,14 +665,14 @@ footer {
   background-color: $first-color;
   height: 150px;
 
-  #logo2 {
+  .logo2 {
     font-family: $cocogoose;
     color: $fourth-color;
     font-size: 40px;
     text-decoration: none;
   }
 
-  #rights_text {
+  .rights_text {
     padding-left: 20px;
     color: $fourth-color;
     font-family: $lato;

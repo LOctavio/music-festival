@@ -145,33 +145,22 @@ table {
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
-#first_navbar,
-#second_navbar,
-#main_section,
-#daily_schedule,
-#djs_list,
-#select_tickets,
-#select_lunch,
-#about_festival,
-footer {
+.first_navbar, .second_navbar, .main_section, .daily_schedule, .djs_list, .select_tickets, .select_lunch, .about_festival, footer {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-#daily_schedule_title,
-#djs_list_title,
-#select_tickets_title,
-#select_lunch_tittle {
+.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
   width: -webkit-fit-content;
@@ -181,15 +170,7 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  #first_navbar,
-  #second_navbar,
-  #main_section,
-  #daily_schedule,
-  #djs_list,
-  #select_tickets,
-  #select_lunch,
-  #about_festival,
-  footer {
+  .first_navbar, .second_navbar, .main_section, .daily_schedule, .djs_list, .select_tickets, .select_lunch, .about_festival, footer {
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -200,116 +181,111 @@ hr {
   border: 1px solid #ec5242;
 }
 
-#first_navbar {
+.first_navbar {
   display: none;
 }
 
-#first_navbar a {
+.first_navbar a {
   color: #fcfcfc;
   text-decoration: none;
   padding: 0 10px;
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
-#second_navbar {
+.second_navbar {
   padding-top: 15px;
   padding-bottom: 20px;
 }
 
-#second_navbar i[class$="fa-bars"] {
+.second_navbar i[class$="fa-bars"] {
   margin-left: 10px;
   font-size: 40px;
   color: #272a31;
 }
 
-#second_navbar a {
+.second_navbar a {
   display: none;
   color: #272a31;
   text-decoration: none;
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
-#second_navbar #logo {
+.second_navbar .logo {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   font-size: 36px;
   color: #272a31;
 }
 
-#second_navbar ul {
+.second_navbar ul {
   display: none;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-#second_navbar ul li {
+.second_navbar ul li {
   padding: 10px 20px;
 }
 
-#second_navbar ul li:hover {
+.second_navbar ul li:hover {
   background-color: #272a31;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
-#second_navbar ul li:hover a {
+.second_navbar ul li:hover a {
   color: #fcfcfc;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
-  #first_navbar {
+  .first_navbar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 30px;
     background-color: #272a31;
   }
-
-  #first_navbar ul {
+  .first_navbar ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-
-  #second_navbar {
+  .second_navbar {
     padding-top: 0;
     padding-bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80px;
   }
-
-  #second_navbar i[class$="fa-bars"] {
+  .second_navbar i[class$="fa-bars"] {
     display: none;
   }
-
-  #second_navbar a {
+  .second_navbar a {
     display: inline;
   }
-
-  #second_navbar ul {
+  .second_navbar ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-#main_title {
+.main_title {
   font-size: 44px;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
@@ -329,17 +305,17 @@ hr {
 .red_button:hover {
   color: #272a31;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 /* index.html file starts */
-#main_section {
+.main_section {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #d3d3d3;
 }
 
-#main_section div {
+.main_section div {
   margin-top: 30px;
   margin-bottom: 15px;
   padding: 10px;
@@ -347,19 +323,19 @@ hr {
   max-width: 500px;
 }
 
-#main_section div #main_description {
+.main_section div .main_description {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
   line-height: 30px;
   color: #272a31;
 }
 
-#main_section #date_festival {
+.main_section .date_festival {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #272a31;
   font-size: 30px;
 }
 
-#daily_schedule {
+.daily_schedule {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #272a31;
@@ -368,18 +344,18 @@ hr {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#daily_schedule_title {
+.daily_schedule_title {
   color: #fcfcfc;
 }
 
-#schedule_grid {
+.schedule_grid {
   display: -ms-grid;
   display: grid;
   gap: 10px;
@@ -387,34 +363,34 @@ hr {
   margin-bottom: 50px;
 }
 
-#schedule_grid > article {
+.schedule_grid > article {
   background-color: #3b3e45;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100px;
 }
 
-#schedule_grid > article > div {
+.schedule_grid > article > div {
   min-width: 200px;
   text-align: center;
   line-height: 30px;
 }
 
-#schedule_grid > article > div h3 {
+.schedule_grid > article > div h3 {
   color: #ec5242;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
-#schedule_grid > article > div p {
+.schedule_grid > article > div p {
   color: #fcfcfc;
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
-#schedule_grid > article span {
+.schedule_grid > article span {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -422,65 +398,64 @@ hr {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
-#schedule_grid > article:hover {
+.schedule_grid > article:hover {
   background-color: #ec5242;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
-#schedule_grid > article:hover h3 {
+.schedule_grid > article:hover h3 {
   color: black;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
-  #schedule_grid > article {
+  .schedule_grid > article {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 180px;
     text-align: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
-  #schedule_grid > article > div {
+  .schedule_grid > article > div {
     min-width: 100px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  #schedule_grid {
+  .schedule_grid {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 3px;
   }
 }
 
-#djs_list {
+.djs_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #d3d3d3;
 }
 
-#djs_list_title {
+.djs_list_title {
   color: #272a31;
 }
 
-#djs_grid {
+.djs_grid {
   display: -ms-grid;
   display: grid;
   gap: 30px;
@@ -488,62 +463,59 @@ hr {
   margin-bottom: 30px;
 }
 
-#djs_grid .djs_grid_item {
+.djs_grid_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#djs_grid .djs_grid_item img[alt^="dj"] {
+.djs_grid_item img[alt^="dj"] {
   max-height: 109px;
   border: 1px solid #272a31;
 }
 
-#djs_grid .djs_grid_item > div {
+.djs_grid_item .djs_description {
   padding-left: 20px;
 }
 
-#djs_grid .djs_grid_item > div h2 {
+.djs_grid_item .djs_description h2 {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
 }
 
-#djs_grid .djs_grid_item > div p {
+.djs_grid_item .djs_description p {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 @media screen and (min-width: 768px) {
-  #djs_grid {
+  .djs_grid {
     -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
 /* index.html file ends */
-
 /* tickets.html file starts */
-#select_tickets,
-#select_lunch,
-#about_festival {
+.select_tickets, .select_lunch, .about_festival {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#select_tickets {
+.select_tickets {
   background-color: #d3d3d3;
   padding-top: 30px;
   padding-bottom: 60px;
 }
 
-#select_tickets_title {
+.select_tickets_title {
   color: #272a31;
 }
 
@@ -552,8 +524,8 @@ hr {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
   padding: 10px 20px;
   border-radius: 20px;
@@ -577,61 +549,61 @@ hr {
 .step:hover {
   background-color: #ec5242;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .step:hover .step_number {
   color: #272a31;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
-#select_tickets_grid {
+.select_tickets_grid {
   display: -ms-grid;
   display: grid;
   width: 100%;
   max-width: 800px;
   border: 5px dashed #ec5242;
   -ms-grid-rows: 40px 40px 60px 60px;
-  grid-template-rows: 40px 40px 60px 60px;
+      grid-template-rows: 40px 40px 60px 60px;
 }
 
-#select_tickets_grid .select_tickets_row {
+.select_tickets_grid .select_tickets_row {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-#select_tickets_grid .select_tickets_row > div {
+.select_tickets_grid .select_tickets_row > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   background-color: #fcfcfc;
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
-#select_tickets_grid .select_tickets_row > div:last-child {
+.select_tickets_grid .select_tickets_row > div:last-child {
   border-right: none;
 }
 
-#select_tickets_grid .select_tickets_row:first-child > div {
+.select_tickets_grid .select_tickets_row:first-child > div {
   background-color: inherit;
 }
 
-#several_days_ticket {
+.several_days_ticket {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-column: 3/5;
@@ -643,16 +615,16 @@ hr {
   color: #ec5242;
 }
 
-#select_lunch {
+.select_lunch {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-#select_lunch_tittle {
+.select_lunch_tittle {
   color: #272a31;
 }
 
-#select_lunch button {
+.select_lunch button {
   margin-top: 20px;
 }
 
@@ -675,11 +647,11 @@ hr {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100px;
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
@@ -695,9 +667,8 @@ hr {
 }
 
 /* tickets.html file ends */
-
 /* about.html file starts */
-#about_festival {
+.about_festival {
   text-align: center;
   padding-top: 80px;
   background-color: #d3d3d3;
@@ -705,17 +676,17 @@ hr {
   padding-bottom: 60px;
 }
 
-#about_festival #main_title {
+.about_festival .main_title {
   margin-bottom: 30px;
 }
 
-#about_festival #email {
+.about_festival .email {
   line-height: 40px;
   color: black;
   font-weight: 900;
 }
 
-#info_festival_container {
+.info_festival_container {
   max-width: 900px;
   margin-top: 30px;
   margin-bottom: 50px;
@@ -730,20 +701,20 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #272a31;
   height: 150px;
 }
 
-footer #logo2 {
+footer .logo2 {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
   color: #fcfcfc;
   font-size: 40px;
   text-decoration: none;
 }
 
-footer #rights_text {
+footer .rights_text {
   padding-left: 20px;
   color: #fcfcfc;
   font-family: "lato-light", Arial, Helvetica, sans-serif;
