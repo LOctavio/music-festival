@@ -1,0 +1,817 @@
+@font-face {
+  font-family: "cocogoose";
+  src: url("../fonts/cocogoose/Cocogoose_trial.otf");
+}
+
+@font-face {
+  font-family: "lato-light";
+  src: url("../fonts/lato/Lato-Light.ttf");
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+$first-color: #272a31;
+$second-color: #ec5242;
+$third-color: #d3d3d3;
+$fourth-color: #fcfcfc;
+$cocogoose: "cocogoose", Arial, Helvetica, sans-serif;
+$lato: "lato-light", Arial, Helvetica, sans-serif;
+
+@mixin padding($padding-page) {
+  padding-left: $padding-page;
+  padding-right: $padding-page;
+}
+
+%display-grid {
+  display: grid;
+}
+
+%padding-shared {
+  @include padding(25px);
+}
+
+@media screen and (min-width: 768px) {
+  %padding-shared {
+    @include padding(120px);
+  }
+}
+
+%title-shared {
+  margin-bottom: 10px;
+  width: fit-content;
+  font-size: 26px;
+
+  @extend %cocogoose;
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}
+
+%transition-duration {
+  transition-duration: 0.5s;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_column {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+%lato {
+  font-family: $lato;
+}
+
+%cocogoose {
+  font-family: $cocogoose;
+}
+
+hr {
+  width: 40px;
+  border: 1px solid $second-color;
+}
+
+.first_navbar {
+  display: none;
+
+  @extend %padding-shared;
+
+  &_text {
+    color: $fourth-color;
+    text-decoration: none;
+    padding: 0 10px;
+
+    @extend %lato;
+  }
+}
+
+.second_navbar {
+  @extend %padding-shared;
+
+  padding-top: 15px;
+  padding-bottom: 20px;
+
+  .campaign_button {
+    @extend %lato;
+
+    display: none;
+    border: 4px solid $second-color;
+    background-color: transparent;
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 0 20px;
+  }
+
+  i[class$="fa-bars"] {
+    margin-left: 10px;
+    font-size: 40px;
+    color: $first-color;
+  }
+
+  a {
+    display: none;
+    color: $first-color;
+    text-decoration: none;
+
+    @extend %lato;
+  }
+
+  .logo {
+    @extend %cocogoose;
+
+    font-size: 36px;
+    color: $first-color;
+  }
+
+  ul {
+    height: fit-content;
+
+    li {
+      padding: 10px 20px;
+      margin: 0 20px;
+    }
+
+    li:hover {
+      background-color: $first-color;
+
+      @extend %transition-duration;
+      @extend %cursor-pointer;
+
+      a {
+        color: $fourth-color;
+
+        @extend %transition-duration;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .first_navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    background-color: $first-color;
+  }
+
+  .second_navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    .campaign_button {
+      display: block;
+    }
+
+    i[class$="fa-bars"] {
+      display: none;
+    }
+
+    a {
+      display: inline;
+    }
+  }
+}
+
+.main_title {
+  font-size: 44px;
+
+  @extend %cocogoose;
+
+  text-transform: uppercase;
+  color: $second-color;
+  max-width: 900px;
+}
+
+.red_button {
+  border: none;
+  background-color: $second-color;
+  color: $fourth-color;
+  padding: 30px 60px;
+
+  @extend %cocogoose;
+
+  font-size: 16px;
+}
+
+.red_button:hover {
+  color: $first-color;
+
+  @extend %transition-duration;
+  @extend %cursor-pointer;
+}
+
+/* index.html file starts */
+
+.main_section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+
+  @extend %padding-shared;
+
+  div {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid $fourth-color;
+    max-width: 500px;
+
+    .main_description {
+      @extend %lato;
+
+      line-height: 30px;
+      color: $first-color;
+    }
+  }
+
+  .date_festival {
+    @extend %cocogoose;
+
+    color: $first-color;
+    font-size: 30px;
+  }
+}
+
+.daily_schedule {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @extend %padding-shared;
+
+  background-color: $first-color;
+
+  &_title {
+    @extend %title-shared;
+
+    color: $fourth-color;
+  }
+}
+
+.schedule_grid {
+  @extend %display-grid;
+
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  > article {
+    background-color: #3b3e45;
+    align-items: center;
+    height: 100px;
+
+    > div {
+      min-width: 200px;
+      text-align: center;
+      line-height: 30px;
+
+      h3 {
+        @extend %cocogoose;
+
+        color: $second-color;
+      }
+
+      p {
+        @extend %cocogoose;
+
+        color: $fourth-color;
+      }
+    }
+
+    span {
+      height: fit-content;
+      color: $fourth-color;
+
+      @extend %lato;
+    }
+  }
+
+  > article:hover {
+    background-color: $second-color;
+
+    @extend %transition-duration;
+    @extend %cursor-pointer;
+
+    h3 {
+      color: black;
+
+      @extend %transition-duration;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    > article {
+      flex-direction: column;
+      height: 180px;
+      text-align: center;
+      justify-content: center;
+
+      > div {
+        min-width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .schedule_grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 3px;
+  }
+}
+
+.djs_list {
+  @extend %padding-shared;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &_title {
+    color: $first-color;
+
+    @extend %title-shared;
+  }
+}
+
+.djs_grid {
+  @extend %display-grid;
+
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  &_item {
+    position: relative;
+    min-height: 129px;
+
+    img[alt="img-background"] {
+      position: absolute;
+    }
+
+    img[alt^="dj"] {
+      max-height: 109px;
+      border: 1px solid $first-color;
+      position: absolute;
+      top: 14px;
+      left: 14px;
+    }
+
+    .djs_description {
+      padding-left: 150px;
+
+      h2 {
+        @extend %cocogoose;
+
+        margin-bottom: 10px;
+      }
+
+      p {
+        @extend %lato;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .djs_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* index.html file ends */
+
+/* tickets.html file starts */
+
+.select_tickets {
+  background-color: #f7f7f7;
+
+  @extend %padding-shared;
+
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  &_title {
+    @extend %title-shared;
+
+    color: $first-color;
+  }
+}
+
+.step {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid $first-color;
+  margin-bottom: 30px;
+
+  &_number {
+    @extend %cocogoose;
+
+    min-width: 90px;
+    color: $second-color;
+    height: fit-content;
+  }
+
+  &_description {
+    @extend %lato;
+  }
+}
+
+.step:hover {
+  background-color: $second-color;
+
+  @extend %transition-duration;
+  @extend %cursor-pointer;
+
+  .step_number {
+    color: $first-color;
+
+    @extend %transition-duration;
+  }
+}
+
+.select_tickets_grid {
+  @extend %display-grid;
+
+  width: 100%;
+  max-width: 800px;
+  border: 5px dashed $second-color;
+  grid-template-rows: 40px 40px 60px 60px;
+
+  .select_tickets_row {
+    @extend %display-grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    > div {
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      background-color: $fourth-color;
+
+      @extend %lato;
+    }
+
+    > div:last-child {
+      border-right: none;
+    }
+  }
+
+  .select_tickets_row:first-child {
+    > div {
+      background-color: inherit;
+    }
+  }
+}
+
+.several_days_ticket {
+  grid-column: 3/5;
+  line-height: 15px;
+}
+
+.ticket_price {
+  @extend %cocogoose;
+
+  color: $second-color;
+}
+
+.select_lunch {
+  @extend %padding-shared;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &_tittle {
+    @extend %title-shared;
+
+    color: $first-color;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+.lunch_menu {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid $first-color;
+}
+
+.lunch_day {
+  @extend %cocogoose;
+
+  text-align: center;
+  line-height: 30px;
+  background-color: $third-color;
+  height: 30px;
+}
+
+.menu_options {
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+
+  @extend %lato;
+
+  .option {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu_options {
+    padding: 0 60px;
+  }
+}
+
+/* tickets.html file ends */
+
+/* about.html file starts */
+
+.about_main_content {
+  text-align: center;
+}
+
+.about_festival {
+  @extend %padding-shared;
+
+  padding-top: 80px;
+  background-color: #f7f7f7;
+
+  @extend %lato;
+
+  padding-bottom: 60px;
+
+  .main_title {
+    margin-bottom: 30px;
+  }
+
+  .email {
+    line-height: 40px;
+    color: black;
+    font-weight: 900;
+  }
+}
+
+.info_festival_container {
+  max-width: 900px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 20px 40px;
+  background-color: $fourth-color;
+  line-height: 30px;
+}
+
+.about_logo {
+  @extend %padding-shared;
+
+  padding-top: 60px;
+
+  &_title {
+    @extend %title-shared;
+  }
+}
+
+.info_logo {
+  @extend %lato;
+
+  line-height: 30px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.logo_about {
+  @extend %cocogoose;
+
+  display: inline-block;
+  text-decoration: none;
+  color: $first-color;
+  font-size: 100px;
+  border: 2px solid #f7f7f7;
+  padding: 20px 30px;
+  margin-bottom: 40px;
+}
+
+.past_events {
+  @extend %padding-shared;
+
+  border-top: 2px solid #efefef;
+  padding-top: 40px;
+
+  &_title {
+    @extend %title-shared;
+  }
+}
+
+.info_past_events {
+  @extend %lato;
+
+  margin: 0 20px;
+  line-height: 25px;
+}
+
+.events_grid {
+  @extend %display-grid;
+
+  gap: 30px;
+  grid-template-columns: 1fr;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .events_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.event {
+  height: 200px;
+  width: 300px;
+  background-color: $second-color;
+
+  &_year {
+    @extend %cocogoose;
+
+    color: white;
+    font-size: 40px;
+    line-height: 200px;
+  }
+}
+
+/* about.html file ends */
+
+footer {
+  @extend %padding-shared;
+
+  align-items: center;
+  background-color: $first-color;
+  height: 150px;
+
+  .logo2 {
+    @extend %cocogoose;
+
+    color: $fourth-color;
+    font-size: 40px;
+    text-decoration: none;
+  }
+
+  .rights_text {
+    padding-left: 20px;
+    color: $fourth-color;
+
+    @extend %lato;
+  }
+}
