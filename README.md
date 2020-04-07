@@ -2,9 +2,9 @@
 
 > This website was designed following the design idea of [Cindy Shin](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
 
-![screenshot](./app_screenshot.png)
-![screenshot](./app_screenshot2.png)
-![screenshot](./app_screenshot3.png)
+![screenshot](./app_screenshot01.png)
+![screenshot](./app_screenshot02.png)
+![screenshot](./app_screenshot03.png)
 
 This project has 3 pages and there are 2 versions on each page for diferents screen sizes(mobile and desktop size).
 
@@ -22,7 +22,7 @@ The tird and last page is the about page. In this page we can read more informat
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/LOctavio/music-festival/9795eac6308ea39321574356b16c4fb61235ec47/index.html)
+[Live Demo Link](https://rawcdn.githack.com/LOctavio/music-festival/191eb50f09433e2f89e77071b10802b1bccbb988/index.html)
 
 ## Authors
 
