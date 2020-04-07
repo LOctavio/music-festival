@@ -12,7 +12,7 @@ The first page is the main page (index). In this page there are a little descrip
 
 The second page is the tickets page. In this page we can buy tickets for the event and we can choose the number of days and the lunch that we want to have.
 
-The tird and last page is the about page. In this page we can read more information about the event and about previous events.
+The third and last page is the about page. In this page we can read more information about the event and about previous events.
 
 ## Built With
 
