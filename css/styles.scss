@@ -181,11 +181,11 @@ $lato: "lato-light", Arial, Helvetica, sans-serif;
 }
 
 %title-shared {
-  @extend %cocogoose;
-
   margin-bottom: 10px;
   width: fit-content;
   font-size: 26px;
+
+  @extend %cocogoose;
 }
 
 %cursor-pointer {
@@ -220,11 +220,11 @@ hr {
 }
 
 .first_navbar {
-  @extend %padding-shared;
-
   display: none;
 
-  a {
+  @extend %padding-shared;
+
+  &_text {
     color: $fourth-color;
     text-decoration: none;
     padding: 0 10px;

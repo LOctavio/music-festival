@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +11,11 @@
 <body>
   <nav class="first_navbar">
     <ul class="flex">
-      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="#">English</a></li>
-      <li><a href="#">My page</a></li>
-      <li><a href="#">Log out</a></li>
+      <li><a class="first_navbar_text" href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a class="first_navbar_text" href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a class="first_navbar_text" href="#">English</a></li>
+      <li><a class="first_navbar_text" href="#">My page</a></li>
+      <li><a class="first_navbar_text" href="#">Log out</a></li>
     </ul>
   </nav>
   <nav class="second_navbar flex ">
@@ -24,13 +24,13 @@
     <ul class="flex">
       <li><a href="./about.html">About</a></li>
       <li><a href="./tickets.html">Tickets</a></li>
-      <button class="campaign_button">Campaign</button>
+      <li class="campaign_button"><a href="#">Campaign</a></li>
     </ul>
   </nav>
   <main>
     <section class="main_section">
       <h1 class="main_title">Summer Electronic Music Festival 2020</h1>
-      <div>
+      <div class="main_description_container">
         <p class="main_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit a voluptatum maxime, optio in aperiam eum cupiditate et vitae ipsum illo, quae, culpa soluta vel fuga id. Voluptatum, recusandae facere.</p>
       </div>
       <p class="date_festival">July 11th ~ July 13th</p>
@@ -39,40 +39,40 @@
       <h2 class="daily_schedule_title">Daily Schedule</h2>
       <hr>
       <div class="schedule_grid">
-        <article class="flex">
-          <div>
-            <h3>Opening</h3>
-            <p>08:00AM - 09:00AM</p>
+        <article class="schedule_item flex">
+          <div class="time">
+            <h3 class="section_schedule">Opening</h3>
+            <p class="section_time">08:00AM - 09:00AM</p>
           </div>
-          <span>Each day an amateur DJ comes to show us new music.</span>
+          <span class="schedule_desctiption">Each day an amateur DJ comes to show us new music.</span>
         </article>
-        <article class="flex">
-          <div>
+        <article class="flex schedule_item">
+          <div class="section_schedule">
             <h3>DJ</h3>
-            <p>09:00AM - 12:00PM</p>
+            <p class="section_time">09:00AM - 12:00PM</p>
           </div>
-          <span>Along this section, the DJs play their music.</span>
+          <span class="schedule_desctiption">Along this section, the DJs play their music.</span>
         </article>
-        <article class="flex">
-          <div>
-            <h3>Break</h3>
-            <p>12:00PM - 01:00PM</p>
+        <article class="flex schedule_item">
+          <div class="time">
+            <h3 class="section_schedule">Break</h3>
+            <p class="section_time">12:00PM - 01:00PM</p>
           </div>
-          <span>This is a space for getting a break between the festival.</span>
+          <span class="schedule_desctiption">This is a space for getting a break between the festival.</span>
         </article>
-        <article class="flex">
-          <div>
-            <h3>DJ</h3>
-            <p>01:00PM - 05:00PM</p>
+        <article class="flex schedule_item">
+          <div class="time">
+            <h3 class="section_schedule">DJ</h3>
+            <p class="section_time">01:00PM - 05:00PM</p>
           </div>
-          <span>Along this section the DJs play their music.</span>
+          <span class="schedule_desctiption">Along this section the DJs play their music.</span>
         </article>
-        <article class="flex">
-          <div>
-            <h3>Main Event</h3>
-            <p>06:00PM - 07:00PM</p>
+        <article class="flex schedule_item">
+          <div class="time">
+            <h3 class="section_schedule">Main Event</h3>
+            <p class="section_time">06:00PM - 07:00PM</p>
           </div>
-          <span>One of the most famous DJ's comes to play music.</span>
+          <span class="schedule_desctiption">One of the most famous DJ's comes to play music.</span>
         </article>
       </div>
       <button class="red_button">Buy your tickets now</button>
