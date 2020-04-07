@@ -680,10 +680,13 @@ hr {
 
 /* about.html file starts */
 
+.about_main_content {
+  text-align: center;
+}
+
 .about_festival {
   @extend %padding-shared;
 
-  text-align: center;
   padding-top: 80px;
   background-color: #f7f7f7;
 
@@ -709,6 +712,83 @@ hr {
   padding: 20px 40px;
   background-color: $fourth-color;
   line-height: 30px;
+}
+
+.about_logo {
+  @extend %padding-shared;
+
+  padding-top: 60px;
+
+  &_title {
+    @extend %title-shared;
+  }
+}
+
+.info_logo {
+  @extend %lato;
+
+  line-height: 30px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.logo_about {
+  @extend %cocogoose;
+
+  display: inline-block;
+  text-decoration: none;
+  color: $first-color;
+  font-size: 100px;
+  border: 2px solid #f7f7f7;
+  padding: 20px 30px;
+  margin-bottom: 40px;
+}
+
+.past_events {
+  @extend %padding-shared;
+
+  border-top: 2px solid #efefef;
+  padding-top: 40px;
+
+  &_title {
+    @extend %title-shared;
+  }
+}
+
+.info_past_events {
+  @extend %lato;
+
+  margin: 0 20px;
+  line-height: 25px;
+}
+
+.events_grid {
+  @extend %display-grid;
+
+  gap: 30px;
+  grid-template-columns: 1fr;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .events_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.event {
+  height: 200px;
+  width: 300px;
+  background-color: $second-color;
+
+  &_year {
+    @extend %cocogoose;
+
+    color: white;
+    font-size: 40px;
+    line-height: 200px;
+  }
 }
 
 /* about.html file ends */

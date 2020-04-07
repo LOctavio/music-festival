@@ -155,24 +155,24 @@ html {
           box-sizing: inherit;
 }
 
-.schedule_grid, .djs_grid, .select_tickets_grid, .select_tickets_grid .select_tickets_row {
+.schedule_grid, .djs_grid, .select_tickets_grid, .select_tickets_grid .select_tickets_row, .events_grid {
   display: -ms-grid;
   display: grid;
 }
 
-.first_navbar, .second_navbar, .main_section, .daily_schedule, .djs_list, .select_tickets, .select_lunch, .about_festival, footer {
+.first_navbar, .second_navbar, .main_section, .daily_schedule, .djs_list, .select_tickets, .select_lunch, .about_festival, .about_logo, .past_events, footer {
   padding-left: 25px;
   padding-right: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  .first_navbar, .second_navbar, .main_section, .daily_schedule, .djs_list, .select_tickets, .select_lunch, .about_festival, footer {
+  .first_navbar, .second_navbar, .main_section, .daily_schedule, .djs_list, .select_tickets, .select_lunch, .about_festival, .about_logo, .past_events, footer {
     padding-left: 120px;
     padding-right: 120px;
   }
 }
 
-.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle {
+.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle, .about_logo_title, .past_events_title {
   margin-bottom: 10px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -208,11 +208,11 @@ html {
           justify-content: center;
 }
 
-.first_navbar a, .second_navbar .campaign_button, .second_navbar a, .main_section div .main_description, .schedule_grid > article span, .djs_grid_item .djs_description p, .step_description, .select_tickets_grid .select_tickets_row > div, .menu_options, .about_festival, footer .rights_text {
+.first_navbar a, .second_navbar .campaign_button, .second_navbar a, .main_section div .main_description, .schedule_grid > article span, .djs_grid_item .djs_description p, .step_description, .select_tickets_grid .select_tickets_row > div, .menu_options, .about_festival, .info_logo, .info_past_events, footer .rights_text {
   font-family: "lato-light", Arial, Helvetica, sans-serif;
 }
 
-.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle, .second_navbar .logo, .main_title, .red_button, .main_section .date_festival, .schedule_grid > article > div h3, .schedule_grid > article > div p, .djs_grid_item .djs_description h2, .step_number, .ticket_price, .lunch_day, footer .logo2 {
+.daily_schedule_title, .djs_list_title, .select_tickets_title, .select_lunch_tittle, .about_logo_title, .past_events_title, .second_navbar .logo, .main_title, .red_button, .main_section .date_festival, .schedule_grid > article > div h3, .schedule_grid > article > div p, .djs_grid_item .djs_description h2, .step_number, .ticket_price, .lunch_day, .logo_about, .event_year, footer .logo2 {
   font-family: "cocogoose", Arial, Helvetica, sans-serif;
 }
 
@@ -611,8 +611,11 @@ hr {
 
 /* tickets.html file ends */
 /* about.html file starts */
-.about_festival {
+.about_main_content {
   text-align: center;
+}
+
+.about_festival {
   padding-top: 80px;
   background-color: #f7f7f7;
   padding-bottom: 60px;
@@ -635,6 +638,63 @@ hr {
   padding: 20px 40px;
   background-color: #fcfcfc;
   line-height: 30px;
+}
+
+.about_logo {
+  padding-top: 60px;
+}
+
+.info_logo {
+  line-height: 30px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.logo_about {
+  display: inline-block;
+  text-decoration: none;
+  color: #272a31;
+  font-size: 100px;
+  border: 2px solid #f7f7f7;
+  padding: 20px 30px;
+  margin-bottom: 40px;
+}
+
+.past_events {
+  border-top: 2px solid #efefef;
+  padding-top: 40px;
+}
+
+.info_past_events {
+  margin: 0 20px;
+  line-height: 25px;
+}
+
+.events_grid {
+  gap: 30px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .events_grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.event {
+  height: 200px;
+  width: 300px;
+  background-color: #ec5242;
+}
+
+.event_year {
+  color: white;
+  font-size: 40px;
+  line-height: 200px;
 }
 
 /* about.html file ends */
