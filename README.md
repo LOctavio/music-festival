@@ -5,11 +5,14 @@
 ![screenshot](./app_screenshot.png)
 ![screenshot](./app_screenshot2.png)
 ![screenshot](./app_screenshot3.png)
-![screenshot](./app_screenshot4.png)
-![screenshot](./app_screenshot5.png)
-![screenshot](./app_screenshot6.png)
 
 This project has 3 pages and there are 2 versions on each page for diferents screen sizes(mobile and desktop size).
+
+The first page is the main page (index). In this page there are a little description about the event, a schedule of each day during the event and a list with the djs who are going to play their music.
+
+The second page is the tickets page. In this page we can buy tickets for the event and we can choose the number of days and the lunch that we want to have.
+
+The tird and last page is the about page. In this page we can read more information about the event and about previous events.
 
 ## Built With
 
@@ -19,7 +22,7 @@ This project has 3 pages and there are 2 versions on each page for diferents scr
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/LOctavio/music-festival/611fea6e4efd3fe14e6c7647f8d6a7d100615385/index.html)
+[Live Demo Link](https://rawcdn.githack.com/LOctavio/music-festival/9795eac6308ea39321574356b16c4fb61235ec47/index.html)
 
 ## Authors
 
